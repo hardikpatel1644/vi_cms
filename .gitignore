@@ -1,0 +1,7 @@
+app/logs/
+bin/doctrine.bat
+nbproject/
+composer.lock
+bin/
+vendor/
+web/bundles/

@@ -1,0 +1,7 @@
+parameters:
+#    vi_user.example.class: Vi\UserBundle\Example
+
+services:
+#    vi_user.example:
+#        class: %vi_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

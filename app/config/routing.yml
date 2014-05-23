@@ -1,0 +1,46 @@
+vi_user:
+    resource: "@ViUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+vi_cms:
+    resource: "@ViCmsBundle/Resources/config/routing.yml"
+    prefix:   /
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+    methods: GET|POST
+ 
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+    methods: GET|POST
+ 
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+    methods: GET|POST
+ 
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+    methods: GET|POST
+ 
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /change-password
+    methods: GET|POST
+ 
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+    methods: GET|POST
+ 
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+    methods: GET|POST
+ 
+soanata_user:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+    prefix: /admin
+    methods: GET|POST

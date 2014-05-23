@@ -1,0 +1,13 @@
+{% extends "::layout.html.twig"%}
+{% block title %}
+    {{ asCms.cmsTitle }}
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>{{ asCms.cmsHeading }}</h1>
+        <p>{{ asCms.cmsContent }}</p>
+    </div>
+{%  endblock%}   
+
+

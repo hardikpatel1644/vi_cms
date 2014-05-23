@@ -1,0 +1,6 @@
+vi_cms_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ViCmsBundle:Default:index }
+vi_cms_annotation:
+    resource: "@ViCmsBundle/Controller"
+    type:     annotation

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        {% block style %}
+            {% include 'TwitterBootstrapBundle::stylesheets.html.twig'%}
+        {% endblock %}	
+
+        {% block script %}
+            {% include 'TwitterBootstrapBundle::javascripts.html.twig'%}
+        {% endblock %}
+    </head>
+    {% block body %}
+        <body>
+            <div class="container">
+                <div class="row">
+                    {% block company_name %}
+                        <h1> <a class="navbar-brand" href="#">Vi Cms </a></h1>
+                    {%  endblock %}
+                </div>
+            </div>
+            {% block menu %}
+                <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="container">
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar" id="navbarCollapse">
+                            {{ knp_menu_render('ViCmsBundle:Builder:mainMenu') }}
+                        </div>
+                    </div>
+                </nav>
+            {% endblock %}
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div class="container">
+                {% block footer %}
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <footer>
+                                <p>© Copyright 2013 Hardik Patel</p>
+                            </footer>
+                        </div>
+                    </div>
+                {% endblock %}
+            </div>
+        </body>
+    {% endblock %}
+</html>

@@ -1,0 +1,27 @@
+    
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    FOSUserBundle: ~
+                    SonataUserBundle: ~
+sonata_user:
+    #admin:
+    #    user:
+    #        class: Vi\UserBundle\Admin\UserAdmin
+    security_acl:             false
+    table:
+        user_group:           users_group
+
+    class:
+        user:         Vi\UserBundle\Entity\User
+        group:        Vi\UserBundle\Entity\Group
+
+#    impersonating:
+#        route:                page_slug
+#        parameters:           { path: / }
+
+    manager_type:             orm
+
